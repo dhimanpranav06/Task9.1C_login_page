@@ -1,0 +1,120 @@
+/* src/styles.css - global styling for NavBar, Login, Signup, Home, Post */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+}
+
+/* container card used on pages */
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 700px;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+/* NavBar */
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffffee;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+}
+
+.Logo { margin: 0; color: #2575fc; }
+.SearchBar {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 260px;
+}
+
+.Nav-right { display: flex; gap: 1rem; align-items:center; }
+.Nav-link {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+.Nav-link:hover { background: #eef6ff; }
+
+/* forms */
+input.input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button.LoginButton, button.Signup-Button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.LoginButton:hover, button.Signup-Button:hover { background: #1b5fd9; }
+
+.SignupButton {
+  display: inline-block;
+  align-self: flex-end;
+  background: #eee;
+  color: #333;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+/* error text */
+.error {
+  color: #b00020;
+  margin-top: 0.6rem;
+}
+
+/* Image and hover text used by Home */
+.Image {
+  position: relative;
+  margin-top: 1.5rem;
+}
+.Image img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.Hover-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(37, 117, 252, 0.85);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.Image:hover .Hover-text { opacity: 1; }
+
+/* small post page */
+.postPage { text-align:center; padding: 1rem; }
